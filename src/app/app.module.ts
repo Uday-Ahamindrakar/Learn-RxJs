@@ -9,9 +9,10 @@ import { provideHttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Page2Component } from './page2/page2.component';
+import { Page3Component } from './page3/page3.component';
 
 @NgModule({
-  declarations: [AppComponent, Page2Component],
+  declarations: [AppComponent, Page2Component, Page3Component],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration(withEventReplay()), provideHttpClient()],
   bootstrap: [AppComponent],
