@@ -1,0 +1,48 @@
+<div class="container-fluid" style="margin: 0px">
+  <div class="row">
+    <div class="col" style="background-color: aliceblue">
+      <h5>App Page 1</h5>
+      <hr />
+      <h4 style="color: blueviolet; background-color: aquamarine">Add User</h4>
+      <div>
+        <label for="user" style="margin-right: 20px">Name</label>
+        <input type="text" id="name" [(ngModel)]="newUser.name" />
+        <label for="email" style="margin-right: 25px; margin-top: 10px"
+          >Email</label
+        >
+        <input type="email" id="email" [(ngModel)]="newUser.email" />
+        <button
+          class="btn btn-success"
+          style="margin-top: 10px; width: 280px"
+          (click)="addNewUser()"
+        >
+          Add User
+        </button>
+      </div>
+      <hr />
+      <table class="table">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col" style="background-color: lightblue">
+      <h5>Page 2</h5>
+      <hr />
+      <app-page2></app-page2>
+    </div>
+    <div class="col" style="background-color: lightgreen">
+      <h5>Page 3</h5>
+      <hr />
+    </div>
+  </div>
+</div>
