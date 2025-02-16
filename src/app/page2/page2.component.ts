@@ -22,7 +22,6 @@ export class Page2Component implements OnInit {
   newUser = {
     name: '',
     email: '',
-    // password: '',
   };
 
   addNewUser() {
